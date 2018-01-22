@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta charset="utf-8">
+   <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″> 
+   <title>精品商城</title>
+    <link rel="icon" href="{{static_url('IMG/icon.png')}}">
+   <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{static_url('CSS/self.css')}}" rel="stylesheet" type="text/css" />
+   <link href="{{static_url('CSS/small.css')}}" media="screen and (max-width: 785px)" rel="stylesheet" type="text/css" />
+   <link href="{{static_url('CSS/big.css')}}" media="screen and (min-width: 785px)" rel="stylesheet" type="text/css" />
+   <link href="{{static_url('jQueryC/responsive-nav.js-master/responsive-nav.css')}}" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="{{static_url('jQueryL/jquery-3.1.1.min.js')}}"></script>
+   <script type="text/javascript" src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+   <script type="text/javascript" src="{{static_url('Javascript/index.js')}}"></script>
+   <script type="text/javascript" src="{{static_url('jQueryC/responsive-nav.js-master/responsive-nav.min.js')}}"></script>
+</head>
+<body background="{{static_url('IMG/rbg.jpg')}}">
+    <div id="grand">
+     <header>
+         <div id="headtop">
+         <div id="headtopson">
+           <div id="headtopleft">
+              <span class="glyphicon glyphicon-map-marker" id="addre"></span>
+           </div>
+           <div id="headtopright">
+                 <ul>
+                   <li><a href="/regist">会员注册</a></li>
+                   <li>|</li>
+                     {% if f==None %}
+                   <li><a href="/login">会员登陆</a></li>
+                     {% else %}
+                     <li><a href="/self">欢迎您,{{f}}</a></li>
+                     <li><a href="/logout">&nbsp;退出登陆</a></li>
+                     {% end %}
+                 </ul>
+           </div>
+           </div>
+         </div>
+         <div id="headfoot">
+            <div id="headfootson">
+            <div id="headfootleft">
+             <div class="glyphicon glyphicon-send" id="logo"></div>
+             <div id="logo1">
+              <div id="logo2">精品商城</div>
+              <div id="logo3">精品商城,享受购物</div>
+             </div>
+            </div>
+            <div id="headfootright">
+                  <ul>
+                     <li><a href="/">首页</a></li>
+                     <li>|</li>
+                      {% if s==0 or s==2 %}
+                     <li><a href="/shopcart">购物车</a></li>
+                      {% end %}
+                     <li>|</li>
+                      {% if s==0 or s==1 %}
+                     <li><a href="/seller">商家入口</a></li>
+                      {% end %}
+                  </ul>
+            </div>
+            </div>
+         </div>
+     </header>
+     <div id="nav">
+         <div id="navson">
+          <div id="navleft">
+           <span class="glyphicon glyphicon-cutlery"></span>
+           <span>商家分类</span>
+          </div>
+          <div id="navright">
+             <ul>
+                <li><a href="/" style="color:orange;">全部</a></li>
+                <li><a href="/1">零食</a></li>
+                <li><a href="/2">日用品</a></li>
+                <li><a href="/3">小电器</a></li>
+             </ul>
+          </div>
+         </div>
+     </div>
+      <div id="nav1">
+         <div id="navson1">
+          <div id="navleft1">
+           <span class="glyphicon glyphicon-cutlery"></span>
+           <span>商家分类</span>
+          </div>
+          <div id="navright1">
+             <ul>
+                <li style="background-color: orange"><a href="#">全部</a></li>
+                <li><a href="#">零食</a></li>
+                <li><a href="#">日用品</a></li>
+                <li><a href="#">小电器</a></li>
+             </ul>
+          </div>
+         </div>
+     </div>
+
+<div id="article" >
+    <div id="article1">
+        {%for r in re %}
+      <div class="mybox1"><a href="/merchant/{{r.id}}"><img src="{{static_url(r.image)}}" class="img-circle" width="100px" height="100px"></a><p><span class="glyphicon glyphicon-glass"></span>&nbsp;&nbsp;&nbsp;{{r.name}}</p>累计销量：{{r.total_sell}}<br>商品总数：{{r.total_goods}}</div>
+        {% end %}
+    </div>
+</div>
+
+    </div>
+</body>
+</html>

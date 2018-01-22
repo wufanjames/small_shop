@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang=zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <link rel="icon" href="{{static_url('IMG/icon.png')}}">
+       <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet">
+    <style>
+    #i1{
+    background-color:#FFFF00;
+    }
+         #i2{
+    background-color:#FFFF00;
+    }
+</style>
+</head>
+<body>
+<div style="width:900px;height:50px;margin:10px; "id="i1"></div>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>商品名</th>
+        <th>价格</th>
+        <th>操作</th>
+    </tr>
+    {%for r in re %}
+    <tr>
+        <td>{{r.name}}</td>
+        <td>{{r.price}}</td>
+        <td><a href="/outshop/{{r.id}}">移除购物车</a></td>
+    </tr>
+    {% end %}
+
+   <h1> 总额:{{s}}</h1>
+    </table>
+    <div style="width:900px;height:50px;margin:10px; "id="i2">
+        <div align="center">
+<a  class="btn btn-danger" href="/post">提交订单</a>
+    <a class="btn btn-danger" href="/">返回首页</a>
+    </div>
+    </div>
+<script src="{{static_url('jqueryL/jquery-3.1.1.min.js')}}"></script>
+<script src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

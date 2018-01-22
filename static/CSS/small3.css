@@ -1,0 +1,162 @@
+*
+{
+	padding:0px;
+	margin:0px;
+}
+#grand
+{
+	width:100%;
+	height:100%;
+	
+}
+header
+{
+	width:100%;
+	
+}
+#headtop
+{
+	width:100%;
+	
+	background-color:#FFDC35;
+	float: left;
+}
+#headtopleft
+{
+	
+	padding:0.5em;
+	width:50%;
+	float: left;
+}
+#headtopleft span
+{
+   margin-right:1%;
+
+}
+#addre
+{
+	font-size: 1.2em;
+}
+.bg
+{
+   font-family: "微软雅黑";
+   font-size: 1.2em;
+}
+.sm
+{
+	font-size: 1.1em;
+	font-family: "微软雅黑";
+}
+
+
+#headtopright ul
+{
+	
+	padding:0.5em;
+    width:50%;
+   text-align:right;
+    float:right;   
+}
+#headtopright ul li
+{
+	list-style-type: none;
+	display: inline;
+	margin-right:0.6%;
+	 color:black;
+}
+#headtopright ul li a
+{
+   font-family: "微软雅黑";
+   font-size:1.1em; 
+   color:black;
+}
+#headfoot
+{
+	
+	width:100%;
+	float: left;
+	
+	box-shadow: 2px 2px 4px #bebebe;
+}
+#headfootson
+{
+	
+   
+    width:95%;
+    margin:auto;
+}
+#headfootleft
+{
+	
+	float: left;
+	width:40%;
+	padding-left:1%;
+	
+}
+#logo
+{
+	font-size: 4em;
+	margin-right: 0.1em;
+	float: left;
+}
+#logo1
+{
+	
+	text-align: center;
+	float:left;
+}
+#logo2
+{
+  font-size:1.2em;
+}
+#logo3
+{
+  font-size: 1em;
+}
+#headfootright ul
+{
+  
+  width:50%;
+  float: right;
+  text-align:center;
+  padding: 1em;
+}
+#headfootright ul li
+{
+  list-style-type: none;
+  display: inline;
+  margin-right: 2%;
+}
+#headfootright ul li a
+{
+	font-size: 1.1em;
+	color:#7b7b7b;
+	text-decoration: none;
+
+}
+nav
+{
+	text-align: center;
+	font-size: 1.7em;
+}
+article
+{
+	padding-left: 5%;
+	
+}
+#articleson div
+{
+	float: left;
+	margin-left:10%;
+	margin-bottom:5%; 
+}
+#articleson p
+{
+	text-align: center;
+}
+button
+{
+	background:#FFDC35;
+	border:none;
+	width:100%;
+}

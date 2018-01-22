@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商家页面</title>
+    <link rel="icon" href="{{static_url('IMG/icon.png')}}">
+     <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+</head>
+<body background="{{static_url('IMG/rbg.jpg')}}">
+<div align="center">
+<h1 style="color:#FF7F24">商家中心</h1>
+<div><img src="{{static_url(r.image)}}" class="img-circle" width="500px" height="300px"></div>
+<br>
+<h2 style="color:#FFD700">商家ID：{{r.id}}</h2>
+<br>
+<h2 style="color:#FFD700">商家名：{{r.name}}</h2>
+<br>
+<h2 style="color:#FFD700">累计销量：{{r.total_sell}}</h2>
+<br>
+<h2 style="color:#FFD700">共有商品：{{r.total_goods}}</h2>
+<br>
+<h2 style="color:#FFD700">产生平台费：{{r.platform_cost}}</h2>
+<br>
+<h2 style="color:#FFD700">操作：</h2>
+<br>
+<a class="btn btn-danger" href="/spassword/{{id}}">修改登陆密码</a>
+<a class="btn btn-info" href="/allgoods/{{id}}">查看商品详情</a>
+<a class="btn btn-warning" href="/logout">退出登陆</a>
+<form method="POST" enctype="multipart/form-data" action="/seller">
+     {% raw xsrf_form_html() %}
+    <div style="color:#EEEE00"><h2> 上传商店图片：</h2></div>
+            <input type="file" id="file" name="file"  required>
+            <br>
+        <button class="btn btn-danger" type="submit">上传</button>
+      </form>
+    </div>
+<script type="text/javascript" src="{{static_url('jQueryL/jquery-3.1.1.min.js')}}"></script>
+   <script type="text/javascript" src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

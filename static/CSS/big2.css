@@ -1,0 +1,114 @@
+* 
+{
+	margin:0px;
+	padding: 0px;
+}
+header
+{
+	width:100%;
+	
+	padding: 0.5em;
+	border-bottom:2px solid #ffd306;
+}
+header span:first-child
+{
+  font-size: 4.0em;
+}
+header span:last-child
+{
+	font-size: 2.0em;
+	position: relative;
+	bottom: 0.6em;
+}
+header div
+{
+	
+	width:13%;
+	margin-left:20%;
+}
+article
+{
+	float: left;
+	
+	width:100%;
+	height:400px;
+	
+}
+#formfather
+{
+	
+	width:40%;
+	margin-top:0%;
+	float: right;
+    
+}
+article img
+{
+	
+	float:left;
+	margin: auto;
+	margin-top:1%; 
+}
+#articleson
+{
+	width:60%;
+	float: left;
+	margin-left:20%;
+	margin-top:3%;
+	
+}
+form input 
+{
+	display: block;
+	width:70%;
+	float: right;
+	height:3em;
+	margin-bottom:2em;
+	margin-top:1em;
+
+}
+#logo
+{
+	
+    float:left;
+    width:25%;
+    text-align: center;
+    padding-top:2em;
+
+}
+
+
+ #logo span
+
+
+{
+	margin-bottom: 1.5em;
+  display: block;
+font-size:20px;
+  
+}
+#sbm1
+{
+	background-color: #ffdc35;
+	color:black;
+	font-weight: bold;
+	border:none;
+}
+#question span a
+{
+	
+	color:orange;
+
+}
+#question 
+{
+	position: absolute;
+	top:58%;
+	left:61%;
+	
+	width:20%;
+}
+#question span
+{
+	margin-left: 14%;
+}

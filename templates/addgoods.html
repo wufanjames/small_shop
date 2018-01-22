@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>添加商品</title>
+    <link rel="icon" href="{{static_url('IMG/icon.png')}}">
+     <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data" action="/addgoods">
+            {% raw xsrf_form_html() %}
+        <div style="color:#EEEE00"><h2>商品名：</h2></div>
+        <input type="text" id="name" class="form-control" name="name"  required >
+        <br>
+            <div style="color:#EEEE00"><h2>价格：</h2></div>
+        <input type="text" id="price" class="form-control" name="price"   required>
+          <br>
+           <div style="color:#EEEE00"><h2> 库存：</h2></div>
+            <input type="text" id="amount" class="form-control"  name="amount"  required>
+            <br>
+    <div style="color:#EEEE00"><h2> 上传商品图片：</h2></div>
+            <input type="file" id="file" name="file"  required>
+            <br>
+            <br>
+            <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">添加</button>
+      </form>
+
+<script src="{{static_url('jqueryL/jquery-3.1.1.min.js')}}"></script>
+<script src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

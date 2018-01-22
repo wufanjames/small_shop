@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>修改密码</title>
+    <link rel="icon" href="{{static_url('IMG/icon.png')}}">
+   <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+</head>
+<body background="{{static_url('IMG/rbg.jpg')}}">
+<div id="container" style="margin-top:100px">
+<form method="post" action="/password/{{id}}">
+                {% raw xsrf_form_html() %}
+             <h1>新密码：</h1><br>
+             <input type="password" class="form-control" id="newpassword" name="newpassword" required="required">
+    <br>
+             <button class="btn btn-lg btn-primary btn-block" type="submit">修&nbsp;改</button>
+            </form>
+    </div>
+   <script type="text/javascript" src="{{static_url('jQueryL/jquery-3.1.1.min.js')}}"></script>
+   <script type="text/javascript" src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

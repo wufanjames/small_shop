@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang=zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>全部商品</title>
+    <link rel="icon" href="{{static_url('IMG/icon.png')}}">
+       <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body>
+<h1>店铺ID：{{sid}}</h1>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>商品名</th>
+        <th>价格</th>
+        <th>库存</th>
+        <th>操作</th>
+    </tr>
+    {%for r in re %}
+    <tr>
+        <td>{{r.name}}</td>
+        <td>{{r.price}}</td>
+        <td>{{r.total_amount}}</td>
+        <td><a href="/edit/{{r.id}}">编辑</a>
+        <a href="/delete/{{r.id}}">删除</a></td>
+    </tr>
+    {% end %}
+
+    </table>
+<div align="center">
+    <a href="/addgoods">添加商品信息</a>
+    <a href="/seller">返回</a>
+    </div>
+<script src="{{static_url('jqueryL/jquery-3.1.1.min.js')}}"></script>
+<script src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

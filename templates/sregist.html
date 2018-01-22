@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商家入驻</title>
+    <link rel="icon" href="{{static_url('IMG/icon.png')}}">
+     <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body background="{{static_url('IMG/rbg.jpg')}}">
+<form method="POST" action="/sregist">
+            {% raw xsrf_form_html() %}
+        <div style="color:#FF3030"><h2>商家名：</h2></div>
+        <input type="text" id="name" class="form-control" name="name"  required >
+        <br>
+    <div style="color:#FF3030"><h2>登陆密码：</h2></div>
+        <input type="password" id="pwd" class="form-control" name="pwd"   required>
+          <br>
+            <div style="color:#FF3030"><h2>类别：</h2></div>
+       <input type="radio" name="class" value="1" >零食&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="class" value="2" checked>日用品&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="class" value="3" checked>小电器
+          <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">入驻</button>
+      </form>
+
+<script src="{{static_url('jqueryL/jquery-3.1.1.min.js')}}"></script>
+<script src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

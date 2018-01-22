@@ -1,0 +1,24 @@
+{
+	"name": "confirmon",
+	"description": "A jQuery plugin for adding an easy 'are you sure' confirmation pop-up before an event handler is called",
+	"version": "0.1.0",
+	"dependencies": {
+		"jquery": ">=1.7"
+	},
+	"keywords": ["confirmation","confirm","button","form","event","on"],
+	"authors": [
+		{
+			"name": "Loran Kloeze | Invetek",
+                        "email": "loran@invetek.nl",
+                        "url": "http://www.invetek.nl/"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/MIT"
+		}
+	],
+	"homepage": "http://www.invetek.nl/?p=66",
+	"main": "jquery.confirmon.js"
+}

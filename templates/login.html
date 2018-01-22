@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>登录</title>
+      <link rel="icon" href="{{static_url('IMG/icon.png')}}">
+      <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+      <style>
+	  #login{
+	    background: #F0F0F0;
+	    height: 300px;
+	    width: 325px;
+	    position: absolute;
+	    top: 200px;
+	    left: 250px;
+	    border-bottom: 2px solid #C2C2C2;
+	    border-right: 2px solid #C2C2C2;
+	  }
+	  div{
+        margin-top: 25px;
+      }
+      </style>
+  </head>
+
+  <body>
+
+  <div style="background:url({{static_url('IMG/bg.jpg')}});background-size:cover;height:475px"></div>
+
+  <div id="login" style="padding: 25px 50px 50px;">
+    <h4><font face="微软雅黑">登录</font></h4>
+    <form class="bs-example bs-example-form" role="form" action="/login" method="post">
+        {% raw xsrf_form_html() %}
+    <div class="input-group input-group-sm">
+      <span class="input-group-addon">账&nbsp;&nbsp;号</span>
+      <input type="text" id="name" class="form-control" placeholder="name" name="name" required></div>
+
+    <div class="input-group input-group-sm">
+      <span class="input-group-addon">密&nbsp;&nbsp;码</span>
+      <input type="password" id="password" class="form-control" placeholder="Password" name="password" required></div>
+
+    <div class="input-group input-group-sm">
+      <input type="radio" name="status" value="2" >会员&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="status" value="1" checked>商家</div>
+
+    <div><button class="btn btn-sm btn-primary btn-block" type="submit">登&nbsp;&nbsp;陆</button></div>
+    </form>
+  </div>
+  <h1>{{m}}</h1>
+
+  <p align="center"><font face="黑体"><a href="/sregist">还不是入驻商户？免费入驻！</a></font></p>
+    <!-- /container -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="{{static_url('jQueryL/jquery-3.1.1.min.js')}}"></script>
+  <script src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+  </body>
+</html>

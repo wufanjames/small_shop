@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta charset="utf-8">
+   <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″> 
+   <title>精品商城</title>
+    <link rel="icon" href="{{static_url('IMG/icon.png')}}">
+   <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{static_url('CSS/self.css')}}" rel="stylesheet" type="text/css" />
+   <link href="{{static_url('CSS/small3.css')}}" media="screen and (max-width: 785px)" rel="stylesheet" type="text/css" />
+   <link href="{{static_url('CSS/big3.css')}}" media="screen and (min-width: 785px)" rel="stylesheet" type="text/css" />
+   <link href="{{static_url('jQueryC/responsive-nav.js-master/responsive-nav.css')}}" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="{{static_url('jQueryL/jquery-3.1.1.min.js')}}"></script>
+   <script type="text/javascript" src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+   <script type="text/javascript" src="{{static_url('Javascript/index3.js')}}"></script>
+   <script type="text/javascript" src="{{static_url('jQueryC/responsive-nav.js-master/responsive-nav.min.js')}}"></script>
+</head>
+<body>
+    <div id="grand">
+     <header>
+         <div id="headtop">
+         <div id="headtopson">
+           <div id="headtopleft">
+              <span class="glyphicon glyphicon-map-marker" id="addre"></span>
+              <span id="address" name="address"><span class="sm">(默认)</span><span class="bg">栖霞区</span><span class="sm">南京邮电大学</span></span>
+           </div>
+           <div id="headtopright">
+                 <ul>
+                   <li><a href="/regist">会员注册</a></li>
+                   <li>|</li>
+                     {% if f==None %}
+                   <li><a href="/login">会员登陆</a></li>
+                     {% else %}
+                     <li><a href="/self">欢迎您,{{f}}</a></li>
+                     <li><a href="/logout">&nbsp;退出登陆</a></li>
+                     {% end %}
+                 </ul>
+           </div>
+           </div>
+         </div>
+         <div id="headfoot">
+            <div id="headfootson">
+            <div id="headfootleft">
+             <div class="glyphicon glyphicon-send" id="logo"></div>
+             <div id="logo1">
+              <div id="logo2">精品商城</div>
+              <div id="logo3">精品商城,享受生活</div>
+             </div>
+            </div>
+            <div id="headfootright">
+                  <ul>
+                     <li><a href="/">首页</a></li>
+                     <li>|</li>
+                     <li><a href="/shopcart">购物车：{{amount[0]['count(*)']}}</h1></a></li>
+
+                     <li>|</li>
+
+                  </ul>
+            </div>
+            </div>
+         </div>
+     </header>
+     <nav>
+{{name[0].name}}
+     </nav>
+     <article>
+
+          <div id="articleson">
+               {%for r in re %}
+            <div class="mybox1"><a href=""><img src="{{static_url(r.image)}}" class="img-circle" width="100px" height="100px"></a><br><p>{{r.name}}<span>(￥{{r.price}})</span></p> <a href="/add/{{r.id}}">加入购物车</a>
+                <p>库存：{{r.total_amount}}<br>累计销量：{{r.total_sell}}</p>
+            </div>
+               {% end %}
+          </div>
+     </article>
+     </div>
+</body>
+</html>

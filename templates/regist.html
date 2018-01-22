@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet">
+    <title>注册</title>
+<link rel="icon" href="{{static_url('IMG/icon.png')}}">
+  </head>
+
+  <body background="{{static_url('IMG/rbg.jpg')}}">
+  <div align="center" style="color:#F00"><h1>{{m}}</h1></div>
+    <div class="container">
+         <div style="margin-top:20px">
+          <div align="center" style="color:#F00">
+        <h1 class="form-signin-heading" >*精品商城，会员注册*</h1>
+              </div>
+            </div>
+        <form method="POST" action="/0">
+            {% raw xsrf_form_html() %}
+        <div style="color:#32CD32"><h2>用户名：</h2></div>
+        <input type="text" id="name" class="form-control" placeholder="Username" name="name" required >
+        <br>
+            <div style="color:#32CD32"><h2>密码：</h2></div>
+        <input type="password" id="pwd" class="form-control" placeholder="Password" name="pwd" required>
+            <div style="color:#32CD32"><h2>手机：</h2></div>
+        <input type="text" id='phone' class="form-control" placeholder="address" name="phone" required>
+          <br>
+           <div style="color:#32CD32"><h2> 地址：</h2></div>
+            <input type="text" id="inputaddress" class="form-control" placeholder="address" name="address" required>
+            <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+      </form>
+
+    </div> <!-- /container -->
+
+   <script src="{{static_url('jQueryL/jquery-3.1.1.min.js')}}"></script>
+   <script src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+  </body>
+</html>

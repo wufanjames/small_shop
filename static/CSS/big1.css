@@ -1,0 +1,231 @@
+* 
+{
+	margin:0px;
+	padding: 0px;
+}
+header
+{
+	width:100%;
+	
+	padding: 0.5em;
+	border-bottom:2px solid #ffd306;
+}
+header span:first-child
+{
+  font-size: 4.0em;
+}
+header span:last-child
+{
+	font-size: 2.0em;
+	position: relative;
+	bottom: 0.6em;
+}
+header div
+{
+	
+	width:13%;
+	margin-left:20%;
+}
+
+#article
+{
+	
+	float: left;
+ 	width:100%;
+     margin-top:3em; 
+ 
+   padding-left:30%; 
+}
+
+#logo
+{
+	
+	width:10%;
+	float: left;
+	
+}
+#logo button
+{
+	display: block;
+	float: right;
+
+}
+#logo button
+{
+	margin-top:1.5em;
+	transition: box-shadow 1s;
+}
+#logo button:hover
+{
+   box-shadow: inset 1px 1px 2px #46A3ff,
+               inset -1px -1px 2px #46a3ff,
+               1px 1px 2px #46a3ff,
+               -1px 1px 2px #46a3ff;
+   background: white;
+}
+#okinput
+{
+	
+	float: left;
+}
+#okinput form input:focus
+{
+	box-shadow:  1px 1px 2px #46A3FF,
+	             -1px -1px 2px #46A3FF;
+}
+textarea:focus
+{
+	box-shadow:  1px 1px 2px #46A3FF,
+	             -1px -1px 2px #46A3FF;
+}
+#okinput form
+{
+	
+	width:50%;
+	float: left;
+}
+#okinput form input
+{
+   display: block;
+   height:3em;
+   margin-top:2em;
+   margin-bottom: 2.1em;
+   margin-left:2em;
+   width:20em; 
+
+}
+textarea
+{
+	resize: none;
+	margin-top:0em;
+	margin-left:2em;
+}
+#judge
+{
+	padding-top:2.6em;
+	padding-right:12em; 
+	float: left;
+	
+ margin-left:1%;
+
+}
+#judge2
+{
+	position: absolute;
+	top:30%;
+
+}
+#judge3
+{
+	position: absolute;
+	top:40%;
+
+}
+#judge4
+{
+	position: absolute;
+	top:49%;
+}
+#judge5
+{
+	position: absolute;
+	top:60%;
+}
+#judge span
+{
+	font-size: 1.9em;
+}
+#sbm,#res
+{
+	background-color: white;
+	border:1px solid black;
+	opacity: 0.9;
+	font-weight: bold;
+
+	transition: box-shadow 1s;
+}
+#sbm:hover,#res:hover
+{
+   box-shadow: inset 1px 1px 2px orange,
+               inset -1px -1px 2px orange,
+               1px 1px 2px orange,
+               -1px 1px 2px orange;	
+}
+.green
+{
+	color:green;
+}
+.greenborder
+{
+  box-shadow: 1px 1px 2px green,
+              -1px -1px 2px green;
+}
+.red
+{
+	color:red;
+}
+.redborder
+{
+	box-shadow: 1px 1px 2px red,
+	            -1px -1px 2px red;
+}
+.yellow
+{
+	color:#ffd306;
+}
+.yellowborder
+{
+	box-shadow: 1px 1px 2px #ffd306,
+	            -1px -1px 2px #ffd306;
+}
+.show
+{
+	display: block;
+}
+.hide
+{
+	display: none;
+}
+#warn
+{
+    
+    margin-top:2.8%;
+   
+    float: left;
+    position: relative;
+    right:8%; 
+}
+#warn div
+{
+	
+	width:20em;
+}
+#warn1
+{
+	position: absolute;
+	top:1em;
+}
+#warn2
+{
+   position: absolute;
+   top:5.7em;
+}
+#warn3
+{
+	position: absolute;
+	top:11em;
+}
+#warn4
+{
+	position: absolute;
+	top:16em;
+}
+#warn5
+{
+	position: absolute;
+	top:22em;
+}
+#warn div span
+{
+	color:red;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>修改手机号</title>
+    <link rel="icon" href="{{static_url('IMG/icon.png')}}">
+   <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+</head>
+<body background="{{static_url('IMG/rbg.jpg')}}">
+<form method="post" action="/phone/{{id}}">
+                {% raw xsrf_form_html() %}
+            <h1>新手机号：</h1>
+    <input type="text" class="form-control" id="newphone" name="newphone"  required="required" />
+<br>
+             <button class="btn btn-lg btn-primary btn-block" type="submit">修&nbsp;改</button>
+            </form>
+  <script type="text/javascript" src="{{static_url('jQueryL/jquery-3.1.1.min.js')}}"></script>
+   <script type="text/javascript" src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery confirmOn Sample</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="../lib/jquery-1.7.0.js"></script>
+        <script src="../jquery.confirmon.js"></script>
+        <link rel="stylesheet" type="text/css" href="sample.css"/>
+        <link rel="stylesheet" type="text/css" href="../jquery.confirmon.css"/>
+        <script>
+            $(function() {
+                $('#button_1').confirmOn('click', function() {
+                    $(this).remove();
+                });
+                
+                $('#button_2').confirmOn({
+                    questionText: 'This action cannot be undone, are you sure?',
+                    textYes: 'Yes, I\'m sure',
+                    textNo: 'No, I\'m not sure'
+                },'click', function() {
+                    $(this).remove();
+                });
+                
+                $('#div_1').confirmOn('mouseover', function() {
+                    $(this).html('Handler called');
+                });
+                
+                $('#div_2').confirmOn('mouseover', {arg1: new Date()}, function(e) {
+                    $(this).html('Data argument: '+e.data.arg1);
+                });
+                
+                $('#button_3').confirmOn({
+                    classPrepend: 'myprefix'
+                },'click', function() {
+                    $(this).remove();
+                });
+                
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="contentwrapper">
+            <h1>jQuery confirmOn plugin sample</h1>
+            <p>A confirmation box pops up when you click one of the buttons or hover over the blue boxes. If you click <i>no</i>, nothing happens. If you
+            click <i>yes</i>, the provided handler in .confirmOn() is called.</p>
+            <table>
+                <tr>
+                    <td>Normal button</td>
+                    <td>
+                        <button id="button_1">Delete me</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Button with confirmOn text options set</td>
+                    <td>
+                        <button id="button_2">Delete me</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Using mouseover event</td>
+                    <td>
+                        <div id="div_1">Mouseover me</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Using mouseover event with data argument</td>
+                    <td>
+                        <div id="div_2">Mouseover me</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Button with confirmOn and another class prefix</td>
+                    <td>
+                        <button id="button_3">Delete me</button>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <p>
+                <a href="http://www.invetek.nl">Invetek - Loran Kloeze</a> | <a href="https://github.com/invetek/jquery-confirmon">https://github.com/invetek/jquery-confirmon</a>
+            </p>
+        </div>
+    </body>
+</html>

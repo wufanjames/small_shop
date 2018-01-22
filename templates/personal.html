@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="icon" href="{{static_url('IMG/icon.png')}}">
+    <link href="{{static_url('bootstrapL/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+</head>
+<body background="{{static_url('IMG/rbg.jpg')}}">
+<div align="center">
+<h1 style="color:#FF7F24">个人中心</h1>
+<br>
+<h2 style="color:#FFD700">用户名：{{user}}</h2>
+<br>
+<h2 style="color:#FFD700">上次登陆时间：{{info[0].last_time}}</h2>
+<br>
+<h2 style="color:#FFD700">手机号：{{info[0].phone}}</h2>
+<br>
+<h2 style="color:#FFD700">收货地址：{{info[0].address}}</h2>
+<br>
+<h2 style="color:#FFD700">操作：</h2>
+<br>
+<a  href="/password/{{info[0].id}}" class="btn btn-danger">修改登陆密码</a>
+<a class="btn btn-danger" href="/phone/{{info[0].id}}">修改手机号</a>
+<a class="btn btn-danger" href="/address/{{info[0].id}}">修改收货地址</a>
+<a class="btn btn-success" href="/">返回首页</a>
+<a class="btn btn-info" href="/urecord">我的订单</a>
+    </div>
+<script type="text/javascript" src="{{static_url('jQueryL/jquery-3.1.1.min.js')}}"></script>
+   <script type="text/javascript" src="{{static_url('bootstrapL/js/bootstrap.min.js')}}"></script>
+</body>
+</html>
